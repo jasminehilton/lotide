@@ -4,23 +4,16 @@ const assertEqual = function(actual, expected) {
   } else console.log(` 😞 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-
-
 const findKeyByValue = function(object, value) {
-  for ( show in object) {
+  for (show in object) {
     if (bestTVShowsByGenre[show] === value) {
-      return show
+      return show;
     }
   }
-  return undefined
-}
-
-
-// takes an object and a value
-// scans the object and returns the first key that contains/equals the value
-// if no key is found that equals the value, return undefined
-
-const bestTVShowsByGenre = { 
+  return undefined;
+};
+ 
+const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"

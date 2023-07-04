@@ -15,7 +15,7 @@ const countLetters = function(sentence) {
   }
   return countObject;
 };
-
+ 
 const result = countLetters("LHL");
 
 assertEqual(result["L"], 2);

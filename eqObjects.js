@@ -1,10 +1,10 @@
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(` 😁 Assertion Passed: ${actual} === ${expected}`);
   } else console.log(` 😞 Assertion Failed: ${actual} !== ${expected}`);
 };
 
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   const keys = Object.keys(object1);
   for (let key of keys) {
     if (Object.keys(object1).length !== Object.keys(object2).length) {

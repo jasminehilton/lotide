@@ -7,8 +7,8 @@ describe("#head", () => {
   });
 
   it("should return hello ", () => {
-    assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"); 
+    assert.strictEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
   });
 });
-
+ 
 

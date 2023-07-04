@@ -21,16 +21,12 @@ const without = function(source, itemsToRemove) {
   let newArray = [];
 
   for (let i = 0; i < source.length; i++) {
-    // we don't know if source is inside itemsToRemove
     let exists = false;
-    // keep source at one position but check all elements in the second array
     for (let j = 0; j < itemsToRemove.length; j++) {
-      // if the item matches then it exists, and should not be added in the newArray
       if (itemsToRemove[j] === source[i]) {
         exists = true;
       }
     }
-    // if exists is false - that means that it was not found in the itemsToRemove array
     if (exists === false) {
       newArray.push(source[i]);
     }
@@ -38,8 +34,8 @@ const without = function(source, itemsToRemove) {
   return newArray;
 };
 
-without([1, 2, 3], [1]); // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
+without([1, 2, 3], [1]);
+without(["1", "2", "3"], [1, 2, "3"]);
 
 
 

@@ -19,18 +19,13 @@ const assertArraysEqual = function(actual, expected) {
 
 const letterPositions = function(sentence) {
   let countObject = {};
-
   for (let i = 0; i < sentence.length; i++) {
-    // console.log(sentence[i]);
-    if (countObject[sentence[i]]) { // undefined is a false so it will skip to the else statement
-      // the letter exists so push the index
+    if (countObject[sentence[i]]) {
       countObject[sentence[i]].push(i);
     } else {
-      // the letter doesn't exist so add it
       countObject[sentence[i]] = [i];
     }
   }
-
   return countObject;
 };
 

@@ -1,4 +1,4 @@
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   const keys = Object.keys(object1);
   for (let key of keys) {
     if (Object.keys(object1).length !== Object.keys(object2).length) {
@@ -10,8 +10,8 @@ const eqObjects = function (object1, object2) {
   }
   return true;
 };
-
-const assertObjectsEqual = function (actual, expected) {
+ 
+const assertObjectsEqual = function(actual, expected) {
   let isSame = eqObjects(actual, expected);
   if (isSame) {
     console.log(` 😁 Assertion Passed: ${actual} === ${expected}`);
@@ -30,24 +30,3 @@ assertObjectsEqual(eqObjects(shirtObject, anotherShirtObject), true); // => true
 assertObjectsEqual(eqObjects(shirtObject, longSleeveShirtObject), false); // => false
 
 module.exports = assertObjectsEqual;
-
-
-// const assertArraysEqual = function(actual, expected) {
-//   let isSame = eqArrays(actual, expected);
-//   if (isSame) {
-//     console.log(` 😁 Assertion Passed: ${actual} === ${expected}`);
-//   } else console.log(` 😞 Assertion Failed: ${actual} !== ${expected}`);
-// };
-
-// const eqArrays = function(arr1, arr2) {
-//   console.log(arr1, arr2);
-//   if (arr1.length !== arr2.length) {
-//     return false;
-//   }
-//   for (let i = 0; i < arr1.length; i++) {
-//     if (arr1[i] !== arr2[i]) {
-//       return false;
-//     }
-//   }
-//   return true;
-// };

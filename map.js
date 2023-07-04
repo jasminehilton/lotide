@@ -6,7 +6,7 @@ const map = function(array, callback) {
     results.push(item);
   }
   return results;
-}
+};
 
 
 const assertArraysEqual = function(actual, expected) {
@@ -15,7 +15,7 @@ const assertArraysEqual = function(actual, expected) {
     console.log(` 😁 Assertion Passed: ${actual} === ${expected}`);
   } else console.log(` 😞 Assertion Failed: ${actual} !== ${expected}`);
 };
-
+ 
 const eqArrays = function(arr1, arr2) {
   console.log(arr1, arr2);
   if (arr1.length !== arr2.length) {
@@ -29,10 +29,6 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-// let mapResult = map(words)
-// let eqArraysResult = eqArrays(mapResult, words)
-
-// assertArraysEqual(eqArrays(map(words), words), true)
 assertArraysEqual(map(words), words);
 
 
